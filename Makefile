@@ -1,8 +1,11 @@
 
 .SECONDEXPANSION:
 
-pml = *.pml
+pml = $(wildcard *.pml)
 png = $(pml:.pml=.png)
+
+%.png: %.pml
+	pymol $<
 
 build: surface.pdf
 
