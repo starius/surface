@@ -293,6 +293,18 @@
     и связывающих молекул воды.
     \end{frame}
 
+    \begin{frame}{PyMol}
+        \begin{itemize}
+        \item vdWS: \verb"show spheres"
+        \item SAS: \verb"show dots; set dot\_mode,1; set dot\_density,3"
+        \item Молекулярная поверхность (Коннолли): \verb"show surface"
+        \item Показать поверхность контакта молекул a c молекулой b:\\
+            \verb"show surface, a and (b around 5.0)"
+        \item Показать поверхность полупрозрачной: \\
+            \verb"set transparency, 0.5"
+        \end{itemize}
+    \end{frame}
+
     \begin{frame}{Ссылки}
         При подготовке данной презентации были использованы материалы с
         сервера компьютерного класса ФББ, Pymol Wiki, Wikipedia, msg.ucsf.edu.
