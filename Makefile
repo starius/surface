@@ -4,12 +4,14 @@
 pml = $(wildcard *.pml)
 png = $(pml:.pml=.png)
 
+build: surface.pdf cheet.pdf
+
 %.png: %.pml
 	pymol $<
 
-build: surface.pdf
+%.pdf: %.tex
+	pdflatex $<
+	pdflatex $<
 
-surface.pdf: *.tex $$(png)
-	pdflatex surface.tex
-	pdflatex surface.tex
+surface.pdf: $$(png)
 
